@@ -15,7 +15,7 @@ if (isset($_SESSION['user'])) {
 <body>
     <h2>Register</h2>
 
-    <form onsubmit="localStorage.setItem('registeredEmail', this.email.value.trim()); location.href = 'login.php'; return false;">
+    <form onsubmit="localStorage.setItem('registeredEmail', this.email.value.trim()); localStorage.setItem('registeredPassword', this.password.value); location.href = 'login.php'; return false;">
         <p>
             <label for="email">Email:</label><br>
             <input type="email" id="email" name="email" required>

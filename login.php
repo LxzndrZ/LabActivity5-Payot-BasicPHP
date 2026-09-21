@@ -54,6 +54,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 error.textContent = 'Incorrect email. Check it and try again.';
                 return false;
             }
+            if (form.password.value !== localStorage.getItem('registeredPassword')) {
+                error.textContent = 'Incorrect password. Try again.';
+                return false;
+            }
 
             error.textContent = '';
             return true;
